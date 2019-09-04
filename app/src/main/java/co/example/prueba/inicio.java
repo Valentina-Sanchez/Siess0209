@@ -50,7 +50,7 @@ public class inicio extends AppCompatActivity {
                     startActivity(intent);
                 } else if (usuario.getText().toString().equals(nomUs) && con.getText().toString().equals(conn2)) {
                     Toast.makeText(inicio.this, "Bienvenido" + nomUs, Toast.LENGTH_SHORT).show();
-                    Intent in = new Intent(inicio.this, inicio2.class);
+                    Intent in = new Intent(inicio.this, prestamos.class);
                     startActivity(in);
                 } else {
                     Toast.makeText(inicio.this, "Verifique sus datos", Toast.LENGTH_SHORT).show();

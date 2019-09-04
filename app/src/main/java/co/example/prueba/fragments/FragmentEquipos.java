@@ -18,7 +18,6 @@ import java.util.List;
 import co.example.prueba.R;
 import co.example.prueba.consumo.Post;
 import co.example.prueba.consumo.PostService;
-import co.example.prueba.listaConsumo;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -55,7 +54,7 @@ public class FragmentEquipos extends Fragment {
     }
     private void getPosts () {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.75.199.29:8085/siessPro-1.0.0/")
+                .baseUrl("http://10.75.199.41:8085/siessPro-1.0.0/")
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
 

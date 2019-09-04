@@ -13,7 +13,6 @@
         <activity android:name=".contenedor"></activity>
         <activity android:name=".prestamos" />
         <activity android:name=".Prestamo" />
-        <activity android:name=".listaConsumo" />
         <activity android:name=".inicio2" />
         <activity android:name=".inicio" />
         <activity android:name=".SplashScreen">

@@ -44,7 +44,7 @@ public class prestamos extends AppCompatActivity {
 
     private void getPosts () {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.75.199.29:8085/siessPro-1.0.0/")
+                .baseUrl("http://10.75.199.41:8085/siessPro-1.0.0/")
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
 

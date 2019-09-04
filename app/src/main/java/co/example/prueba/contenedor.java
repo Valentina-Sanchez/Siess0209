@@ -25,7 +25,6 @@ public class contenedor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contenedor);
-        getSupportActionBar().hide();
 
         bottomNavigationView = findViewById(R.id.container_nav);
         frameLayout = findViewById(R.id.contenedor);
