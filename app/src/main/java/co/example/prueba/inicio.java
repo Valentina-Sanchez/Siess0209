@@ -4,15 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
 import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class inicio extends AppCompatActivity {
@@ -46,7 +42,7 @@ public class inicio extends AppCompatActivity {
 
                 if (usuario.getText().toString().equals(nombreAd) && con.getText().toString().equals(conn)) {
                     Toast.makeText(inicio.this, "Bienvenido" + nombreAd, Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(inicio.this, contenedor.class);
+                    Intent intent = new Intent(inicio.this, Contenedor.class);
                     startActivity(intent);
                 } else if (usuario.getText().toString().equals(nomUs) && con.getText().toString().equals(conn2)) {
                     Toast.makeText(inicio.this, "Bienvenido" + nomUs, Toast.LENGTH_SHORT).show();

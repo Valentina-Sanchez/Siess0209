@@ -3,6 +3,7 @@ package co.example.prueba.fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
@@ -39,6 +40,12 @@ public class FragmentEquipos extends Fragment {
 
 
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
@@ -52,6 +59,7 @@ public class FragmentEquipos extends Fragment {
         getPosts();
         return view;
     }
+
     private void getPosts () {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://10.75.199.41:8085/siessPro-1.0.0/")

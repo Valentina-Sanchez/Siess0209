@@ -14,7 +14,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import co.example.prueba.fragments.FragmentEquipos;
 import co.example.prueba.fragments.FragmentNotificaciones;
 
-public class contenedor extends AppCompatActivity {
+public class Contenedor extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     FragmentEquipos fragmentEquipos = new FragmentEquipos();
@@ -29,7 +29,7 @@ public class contenedor extends AppCompatActivity {
         bottomNavigationView = findViewById(R.id.container_nav);
         frameLayout = findViewById(R.id.contenedor);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,fragmentEquipos)
+        getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,fragmentNotificaciones)
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit();
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

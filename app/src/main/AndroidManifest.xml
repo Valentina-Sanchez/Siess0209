@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".contenedor"></activity>
+        <activity android:name=".Contenedor"></activity>
         <activity android:name=".prestamos" />
         <activity android:name=".Prestamo" />
         <activity android:name=".inicio2" />
