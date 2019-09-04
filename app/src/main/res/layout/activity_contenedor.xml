@@ -7,17 +7,16 @@
     tools:context=".contenedor">
 
     <FrameLayout
-        android:id="@+id/container_frame"
+        android:id="@+id/contenedor"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="56dp"></FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/container_nav"
-        android:layout_gravity="bottom"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        app:menu="@menu/menu_container">
+        app:menu="@menu/menu">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 

@@ -21,7 +21,7 @@ public class inicio extends AppCompatActivity {
     EditText usuario, con;
 
 
-    String nombre = "Admin" , nom2 = "User";
+    String nombreAd = "Admin" , nomUs = "User";
     String conn = "admin", conn2= "user";
 
     @Override
@@ -44,12 +44,12 @@ public class inicio extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (usuario.getText().toString().equals(nombre) && con.getText().toString().equals(conn)) {
-                    Toast.makeText(inicio.this, "Bienvenido" + nombre, Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(inicio.this, MainActivity.class);
+                if (usuario.getText().toString().equals(nombreAd) && con.getText().toString().equals(conn)) {
+                    Toast.makeText(inicio.this, "Bienvenido" + nombreAd, Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(inicio.this, contenedor.class);
                     startActivity(intent);
-                } else if (usuario.getText().toString().equals(nom2) && con.getText().toString().equals(conn2)) {
-                    Toast.makeText(inicio.this, "Bienvenido" + nom2, Toast.LENGTH_SHORT).show();
+                } else if (usuario.getText().toString().equals(nomUs) && con.getText().toString().equals(conn2)) {
+                    Toast.makeText(inicio.this, "Bienvenido" + nomUs, Toast.LENGTH_SHORT).show();
                     Intent in = new Intent(inicio.this, inicio2.class);
                     startActivity(in);
                 } else {
