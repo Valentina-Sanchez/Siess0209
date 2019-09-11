@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class inicio extends AppCompatActivity {
+public class Inicio extends AppCompatActivity {
 
     Button boton;
     EditText usuario, con;
@@ -41,21 +41,21 @@ public class inicio extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (usuario.getText().toString().equals(nombreAd) && con.getText().toString().equals(conn)) {
-                    Toast.makeText(inicio.this, "Bienvenido" + nombreAd, Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(inicio.this, Contenedor.class);
+                    Toast.makeText(Inicio.this, "Bienvenido" + nombreAd, Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Inicio.this, Contenedor.class);
                     startActivity(intent);
                 } else if (usuario.getText().toString().equals(nomUs) && con.getText().toString().equals(conn2)) {
-                    Toast.makeText(inicio.this, "Bienvenido" + nomUs, Toast.LENGTH_SHORT).show();
-                    Intent in = new Intent(inicio.this, prestamos.class);
+                    Toast.makeText(Inicio.this, "Bienvenido" + nomUs, Toast.LENGTH_SHORT).show();
+                    Intent in = new Intent(Inicio.this, Prestamos.class);
                     startActivity(in);
                 } else {
-                    Toast.makeText(inicio.this, "Verifique sus datos", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Inicio.this, "Verifique sus datos", Toast.LENGTH_SHORT).show();
 
                 }
             }
         });
 
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(inicio.this, Notification.EXTRA_CHANNEL_ID)
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(Inicio.this, Notification.EXTRA_CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_launcher_background)
                 .setContentTitle("Titulo")
                 .setContentText("Contenido")

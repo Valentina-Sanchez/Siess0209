@@ -10,11 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Contenedor"></activity>
-        <activity android:name=".prestamos" />
+        <activity android:name=".DetallePrestamo"></activity>
+        <activity android:name=".Contenedor" />
+        <activity android:name=".Prestamos" />
         <activity android:name=".Prestamo" />
-        <activity android:name=".inicio2" />
-        <activity android:name=".inicio" />
+        <activity android:name=".Inicio2" />
+        <activity android:name=".Inicio" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

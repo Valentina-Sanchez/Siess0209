@@ -51,7 +51,7 @@ public class Prestamo extends AppCompatActivity {
         btnAceptar.setOnClickListener( new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Prestamo.this, inicio2.class);
+                Intent intent = new Intent(Prestamo.this, Inicio2.class);
                 startActivity(intent);
             }
 

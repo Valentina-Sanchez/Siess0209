@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetallePrestamo">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/fondo"
+        android:id="@+id/im"
+        >
+         </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/im"
+        android:text="Codigo Prestamo"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:id="@+id/cod"
+        android:textColor="@color/primary_text"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cod"
+        android:layout_centerHorizontal="true"
+        android:text="FechaSolicitud"
+        android:textSize="25dp"
+        android:id="@+id/feSol"
+        android:textColor="@color/primary_text"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/feSol"
+        android:layout_centerHorizontal="true"
+        android:text="Fecha Salida"
+        android:textSize="25dp"
+        android:id="@+id/feSal"
+        android:textColor="@color/primary_text"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/feSal"
+        android:layout_centerHorizontal="true"
+        android:text="Fecha Devolucion"
+        android:textSize="25dp"
+        android:id="@+id/feDe"
+        android:textColor="@color/primary_text"
+        >
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/feDe"
+        android:layout_centerHorizontal="true"
+        android:text="Estado solicitud"
+        android:textSize="25dp"
+        android:id="@+id/ESTADO"
+        android:textColor="@color/primary_text"
+        >
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ESTADO"
+        android:layout_centerHorizontal="true"
+        android:text="ficha"
+        android:textSize="25dp"
+        android:id="@+id/ficha"
+        android:textColor="@color/primary_text"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ficha"
+        android:layout_centerHorizontal="true"
+        android:text="Municipio"
+        android:textSize="25dp"
+        android:id="@+id/muni"
+        android:textColor="@color/primary_text"
+        >
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/muni"
+        android:layout_centerHorizontal="true"
+        android:text="Responsable"
+        android:textSize="25dp"
+        android:id="@+id/resp"
+        android:textColor="@color/primary_text"
+        >
+    </TextView>
+
+</RelativeLayout>

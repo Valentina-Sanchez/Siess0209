@@ -10,14 +10,13 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
 import co.example.prueba.modelo.Adaptador2;
 import co.example.prueba.modelo.item;
 
-public class inicio2 extends AppCompatActivity {
+public class Inicio2 extends AppCompatActivity {
 
 
     ArrayList<item> lista2;
@@ -35,7 +34,7 @@ public class inicio2 extends AppCompatActivity {
         salir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(inicio2.this, inicio.class);
+                Intent in = new Intent(Inicio2.this, Inicio.class);
                 startActivity(in);
             }
         });
@@ -43,7 +42,7 @@ public class inicio2 extends AppCompatActivity {
         lista2= new ArrayList<>();
         recyclerView= findViewById(R.id.opRecicler);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(inicio2.this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(Inicio2.this));
 
         llenarLista();
 
@@ -57,9 +56,9 @@ public class inicio2 extends AppCompatActivity {
                /* Snackbar.make(view, "Lista de consumo", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();*/
 
-                Toast.makeText(inicio2.this, "solicitud prestamo", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Inicio2.this, "solicitud prestamo", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(inicio2.this, prestamos.class);
+                Intent intent = new Intent(Inicio2.this, Prestamos.class);
                 startActivity(intent);
             }
         });
