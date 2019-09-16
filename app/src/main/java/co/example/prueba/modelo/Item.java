@@ -1,16 +1,16 @@
 package co.example.prueba.modelo;
 
-public class item {
+public class Item {
 
     private String nombre;
     private String descripcion;
     private String foto;
 
-    public item(){
+    public Item(){
 
     }
 
-    public item(String nombre, String descripcion, String foto) {
+    public Item(String nombre, String descripcion, String foto) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.foto = foto;

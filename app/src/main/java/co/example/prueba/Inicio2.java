@@ -14,12 +14,12 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 
 import co.example.prueba.modelo.Adaptador2;
-import co.example.prueba.modelo.item;
+import co.example.prueba.modelo.Item;
 
 public class Inicio2 extends AppCompatActivity {
 
 
-    ArrayList<item> lista2;
+    ArrayList<Item> lista2;
     RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,13 +67,13 @@ public class Inicio2 extends AppCompatActivity {
     }
 
     private void llenarLista() {
-        lista2.add(new item("Prestamo realizado el 12/06/2019","Fecha devolución 25/06/2019","https://www.konfest.com/wp-content/uploads/2019/05/Konfest-PNG-JPG-Image-Pic-Photo-Free-Download-Royalty-Unlimited-clip-art-sticker-Check-Mark-Symbol-Right-Tick-Yes-Green-27.png"));
+        lista2.add(new Item("Prestamo realizado el 12/06/2019","Fecha devolución 25/06/2019","https://www.konfest.com/wp-content/uploads/2019/05/Konfest-PNG-JPG-Image-Pic-Photo-Free-Download-Royalty-Unlimited-clip-art-sticker-Check-Mark-Symbol-Right-Tick-Yes-Green-27.png"));
 
-        lista2.add(new item("Prestamo realizado el 22/06/2019","Fecha devolución 30/06/2019","https://www.konfest.com/wp-content/uploads/2019/05/Konfest-PNG-JPG-Image-Pic-Photo-Free-Download-Royalty-Unlimited-clip-art-sticker-Check-Mark-Symbol-Right-Tick-Yes-Green-27.png"));
+        lista2.add(new Item("Prestamo realizado el 22/06/2019","Fecha devolución 30/06/2019","https://www.konfest.com/wp-content/uploads/2019/05/Konfest-PNG-JPG-Image-Pic-Photo-Free-Download-Royalty-Unlimited-clip-art-sticker-Check-Mark-Symbol-Right-Tick-Yes-Green-27.png"));
 
-        lista2.add(new item("Prestamo realizado el 02/07/2019","Fecha devolución 12/07/2019","https://www.konfest.com/wp-content/uploads/2019/05/Konfest-PNG-JPG-Image-Pic-Photo-Free-Download-Royalty-Unlimited-clip-art-sticker-Check-Mark-Symbol-Right-Tick-Yes-Green-27.png"));
+        lista2.add(new Item("Prestamo realizado el 02/07/2019","Fecha devolución 12/07/2019","https://www.konfest.com/wp-content/uploads/2019/05/Konfest-PNG-JPG-Image-Pic-Photo-Free-Download-Royalty-Unlimited-clip-art-sticker-Check-Mark-Symbol-Right-Tick-Yes-Green-27.png"));
 
-        lista2.add(new item("Prestamo realizado el 30/08/2019","Fecha devolución 05/09/2019","https://www.konfest.com/wp-content/uploads/2019/05/Konfest-PNG-JPG-Image-Pic-Photo-Free-Download-Royalty-Unlimited-clip-art-sticker-Check-Mark-Symbol-Right-Tick-Yes-Green-27.png"));
+        lista2.add(new Item("Prestamo realizado el 30/08/2019","Fecha devolución 05/09/2019","https://www.konfest.com/wp-content/uploads/2019/05/Konfest-PNG-JPG-Image-Pic-Photo-Free-Download-Royalty-Unlimited-clip-art-sticker-Check-Mark-Symbol-Right-Tick-Yes-Green-27.png"));
 
     }
 }

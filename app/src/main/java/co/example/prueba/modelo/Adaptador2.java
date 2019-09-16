@@ -17,9 +17,9 @@ import co.example.prueba.R;
 
 public class Adaptador2 extends RecyclerView.Adapter<Adaptador2.viewHolderItem> {
 
-    ArrayList <item> lista2;
+    ArrayList <Item> lista2;
 
-    public Adaptador2(ArrayList<item> lista2) {
+    public Adaptador2(ArrayList<Item> lista2) {
 
         this.lista2 = lista2;
     }
@@ -35,7 +35,7 @@ public class Adaptador2 extends RecyclerView.Adapter<Adaptador2.viewHolderItem> 
     @Override
     public void onBindViewHolder(@NonNull Adaptador2.viewHolderItem holder, int position) {
 
-        item itemModel = lista2.get(position);
+        Item itemModel = lista2.get(position);
         Picasso.get().load(itemModel.getFoto()).into(Adaptador2.viewHolderItem.ima);
         holder.nom.setText(lista2.get(position).getNombre());
         holder.des.setText(lista2.get(position).getDescripcion());
