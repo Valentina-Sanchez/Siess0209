@@ -1,11 +1,12 @@
 package co.example.prueba.consumo;
 
+import java.math.BigInteger;
 import java.util.Date;
 
 public class Post {
     private int pkEquipo;
     private String nombre;
-    private  int serial;
+    private BigInteger serial;
     private String modelo;
     private int placaSena;
     private int numeroCertificacion;
@@ -18,7 +19,7 @@ public class Post {
     public Post() {
     }
 
-    public Post(int pkEquipo, String nombre, int serial, String modelo, int placaSena, int numeroCertificacion, String vidaUtilPrevista, Date anioFabricacion, Date fechaCompra, Date fechaInicioOperacion, Date fechaRetiro) {
+    public Post(int pkEquipo, String nombre, BigInteger serial, String modelo, int placaSena, int numeroCertificacion, String vidaUtilPrevista, Date anioFabricacion, Date fechaCompra, Date fechaInicioOperacion, Date fechaRetiro) {
         this.pkEquipo = pkEquipo;
         this.nombre = nombre;
         this.serial = serial;
@@ -48,11 +49,11 @@ public class Post {
         this.nombre = nombre;
     }
 
-    public int getSerial() {
+    public BigInteger getSerial() {
         return serial;
     }
 
-    public void setSerial(int serial) {
+    public void setSerial(BigInteger serial) {
         this.serial = serial;
     }
 

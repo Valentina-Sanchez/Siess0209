@@ -79,4 +79,14 @@ android:textColorHint="@android:color/black"
         android:textColor="@color/primary_text"
         android:textSize="15dp"
         />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="registrar"
+        android:layout_below="@+id/btnAcep"
+        android:layout_marginTop="15dp"
+        android:id="@+id/btnReg"
+        android:background="@drawable/redondo"
+        android:onClick="onRegister"></Button>
 </RelativeLayout>

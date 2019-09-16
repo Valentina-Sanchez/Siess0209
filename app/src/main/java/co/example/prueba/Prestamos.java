@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -53,14 +54,15 @@ public class Prestamos extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(Prestamos.this, DetallePrestamo.class);
-                intent.putExtra("codigo", prestamos.get(i).getCodigo());
-                intent.putExtra("fechaSol", prestamos.get(i).getFechasolicitud());
-                intent.putExtra("fechaSal", prestamos.get(i).getFechasalida());
-                intent.putExtra("fechaDe", prestamos.get(i).getFechadevolucion());
-                intent.putExtra("estado", prestamos.get(i).getEstado());
-                intent.putExtra("ficha", prestamos.get(i).getFk_ficha().toString());
-                intent.putExtra("municipio", prestamos.get(i).getFk_municipio().toString());
-                intent.putExtra("responsable", prestamos.get(i).getFk_responsable().toString());
+                intent.putExtra("codigo", prestamos.get(0).getCodigo());
+                intent.putExtra("fechaSol", prestamos.get(0).getFechasolicitud());
+                intent.putExtra("fechaSal", prestamos.get(0).getFechasalida());
+                intent.putExtra("fechaDe", prestamos.get(0).getFechadevolucion());
+                intent.putExtra("estado", prestamos.get(0).getEstado());
+                intent.putExtra("observacion", prestamos.get(0).getObservacion());
+                intent.putExtra("ficha",prestamos.get(0).getFk_ficha().getCodigo());
+                intent.putExtra("municipio", prestamos.get(0).getFk_municipio()+"");
+                intent.putExtra("responsable", prestamos.get(0).getFk_responsable()+"");
                 startActivity(intent);
             }
         });
@@ -97,6 +99,5 @@ public class Prestamos extends AppCompatActivity {
             }
         });
     }
-
 
 }

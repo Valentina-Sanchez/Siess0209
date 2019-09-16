@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class DetallePrestamo extends AppCompatActivity {
 
     ImageView imageView;
-    TextView codigo, fechaSolicitud, fechaSalida ,fechaDevolucion, estado, ficha, municipio, responsable;
+    TextView codigo, fechaSolicitud, fechaSalida ,fechaDevolucion, estado, ficha, municipio, responsable , obser;
     ListView listView ;
 
     @Override
@@ -26,25 +26,28 @@ public class DetallePrestamo extends AppCompatActivity {
         ficha= findViewById(R.id.ficha);
         municipio=findViewById(R.id.muni);
         responsable=findViewById(R.id.resp);
+        obser=findViewById(R.id.ob);
 
         codigo.setText(Prestamos.prestamos.get(0).getCodigo().toString());
-        fechaSolicitud.setText(Prestamos.prestamos.get(1).getFechasolicitud().toString());
-        fechaSalida.setText(Prestamos.prestamos.get(2).getFechasalida().toString());
-        fechaDevolucion.setText(Prestamos.prestamos.get(3).getFechadevolucion().toString());
-        estado.setText(Prestamos.prestamos.get(4).getEstado());
-        ficha.setText(Prestamos.prestamos.get(5).getFk_ficha().toString());
-        municipio.setText(Prestamos.prestamos.get(6).getFk_municipio().toString());
-        responsable.setText(Prestamos.prestamos.get(7).getFk_responsable().toString());
+        fechaSolicitud.setText((int) Prestamos.prestamos.get(0).getFechasolicitud());
+        fechaSalida.setText(Prestamos.prestamos.get(0).getFechasalida().toString());
+        fechaDevolucion.setText(Prestamos.prestamos.get(0).getFechadevolucion().toString());
+        estado.setText(Prestamos.prestamos.get(0).getEstado());
+        obser.setText(Prestamos.prestamos.get(0).getObservacion());
+        ficha.setText(Prestamos.prestamos.get(0).getFk_ficha().getCodigo());
+        municipio.setText(Prestamos.prestamos.get(0).getFk_municipio().toString());
+        responsable.setText(Prestamos.prestamos.get(0).getFk_responsable().toString());
 
         Bundle datos = this.getIntent().getExtras();
-        String codigo= datos.getString("codigo");
-        String fechaSol = datos.getString("fechaSol");
-        String fechaSal = datos.getString("fechaSal");
-        String fechaDe = datos.getString("fechaDe");
-        String estado = datos.getString("estado");
-        String ficha = datos.getString("ficha");
-        String municipio = datos.getString("municipio");
-        String responsable = datos.getString("responsable");
+        String codigo= datos.getString("codigo","0");
+        String fechaSol = datos.getString("fechaSol", "0" );
+        String fechaSal = datos.getString("fechaSal","0");
+        String fechaDe = datos.getString("fechaDe","0");
+        String estado = datos.getString("estado","0");
+        String obser = datos.getString("observacion", "0");
+        String ficha = datos.getString("ficha","0");
+        String municipio = datos.getString("municipio","0");
+        String responsable = datos.getString("responsable","0");
 
     }
 }

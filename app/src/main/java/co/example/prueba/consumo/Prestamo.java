@@ -10,11 +10,11 @@ import co.example.prueba.modelo.Responsable;
 public class Prestamo {
 
     private String codigo;
-   private String fechasolicitud;
+   private long fechasolicitud;
     private String fechasalida;
     private String fechadevolucion;
     private short estado;
-    private String descripcion;
+    private String observacion;
     private Ficha fk_ficha;
     private Municipio fk_municipio;
     private Responsable fk_responsable;
@@ -27,23 +27,23 @@ public class Prestamo {
         this.codigo = codigo;
     }
 
-    public Prestamo(String fechasolicitud, String fechasalida, String fechadevolucion, short estado, String descripcion, Ficha fk_ficha, Municipio fk_municipio, Responsable fk_responsable , String codigo) {
+    public Prestamo(Long fechasolicitud, String fechasalida, String fechadevolucion, short estado, String observacion, Ficha fk_ficha, Municipio fk_municipio, Responsable fk_responsable , String codigo) {
         this.fechasolicitud = fechasolicitud;
         this.fechasalida = fechasalida;
         this.fechadevolucion = fechadevolucion;
         this.estado = estado;
-        this.descripcion = descripcion;
+        this.observacion = observacion;
         this.fk_ficha = fk_ficha;
         this.fk_municipio = fk_municipio;
         this.fk_responsable = fk_responsable;
         this.codigo = codigo;
     }
 
-    public String getFechasolicitud() {
+    public long getFechasolicitud() {
         return fechasolicitud;
     }
 
-    public void setFechasolicitud(String fechasolicitud) {
+    public void setFechasolicitud(long fechasolicitud) {
         this.fechasolicitud = fechasolicitud;
     }
 
@@ -71,12 +71,12 @@ public class Prestamo {
         this.estado = estado;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getObservacion() {
+        return observacion;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setObservacion(String descripcion) {
+        this.observacion = descripcion;
     }
 
     public Ficha getFk_ficha() {
