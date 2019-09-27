@@ -2,7 +2,11 @@ package co.example.prueba;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -12,12 +16,15 @@ public class DetallePrestamo extends AppCompatActivity {
     ImageView imageView;
     TextView codigo, fechaSolicitud, fechaSalida ,fechaDevolucion, estado, ficha, municipio, responsable , obser;
     ListView listView ;
+    static final int REQUEST_IMAGE_CAPTURE = 1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_prestamo);
 
+        imageView=findViewById(R.id.im);
         codigo = findViewById(R.id.cod);
         fechaSolicitud = findViewById(R.id.feSol);
         fechaSalida = findViewById(R.id.feSal);
@@ -28,15 +35,18 @@ public class DetallePrestamo extends AppCompatActivity {
         responsable=findViewById(R.id.resp);
         obser=findViewById(R.id.ob);
 
-        codigo.setText(Prestamos.prestamos.get(0).getCodigo().toString());
-        fechaSolicitud.setText((int) Prestamos.prestamos.get(0).getFechasolicitud());
-        fechaSalida.setText(Prestamos.prestamos.get(0).getFechasalida().toString());
-        fechaDevolucion.setText(Prestamos.prestamos.get(0).getFechadevolucion().toString());
-        estado.setText(Prestamos.prestamos.get(0).getEstado());
-        obser.setText(Prestamos.prestamos.get(0).getObservacion());
-        ficha.setText(Prestamos.prestamos.get(0).getFk_ficha().getCodigo());
-        municipio.setText(Prestamos.prestamos.get(0).getFk_municipio().toString());
-        responsable.setText(Prestamos.prestamos.get(0).getFk_responsable().toString());
+        int i =0;
+
+        codigo.setText(Prestamos.prestamos.get(i).getCodigo().toString());
+        fechaSolicitud.setText( Prestamos.prestamos.get(i).getFechasolicitud());
+        fechaSalida.setText(Prestamos.prestamos.get(i).getFechasalida().toString());
+        fechaDevolucion.setText(Prestamos.prestamos.get(i).getFechadevolucion().toString());
+        estado.setText(Prestamos.prestamos.get(i).getEstado()+"");
+        obser.setText(Prestamos.prestamos.get(i).getObservacion());
+        ficha.setText(Prestamos.prestamos.get(i).getFk_ficha().getCodigo());
+        municipio.setText(Prestamos.prestamos.get(i).getFk_municipio().getNombre());
+        responsable.setText(Prestamos.prestamos.get(i).getFk_responsable().getNombres() +" " +
+                Prestamos.prestamos.get(i).getFk_responsable().getApellidos());
 
         Bundle datos = this.getIntent().getExtras();
         String codigo= datos.getString("codigo","0");
@@ -50,4 +60,24 @@ public class DetallePrestamo extends AppCompatActivity {
         String responsable = datos.getString("responsable","0");
 
     }
+    private void dispatchTakePictureIntent() {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            imageView.setImageBitmap(imageBitmap);
+        }
+    }
+
+    public void onTomarFoto(View view){
+        dispatchTakePictureIntent();
+    }
+
 }
